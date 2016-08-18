@@ -13,10 +13,9 @@ exports.headers = {
 exports.serveClient = function(res) {
   var dataFile = '';
   fs.readFile(__dirname + '/public/index.html', 'utf8', function(err, data) {
-
     if (err) {
       console.log('error: ', err);
-    } else {
+    } else {   
       res.writeHead(200, exports.headers);
       res.end(data);
     }
