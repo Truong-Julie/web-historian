@@ -8,6 +8,8 @@ initialize('./archives');
 
 var port = 1337;
 var ip = '127.0.0.1';
+
+var router = {};
 var server = http.createServer(handler.handleRequest);
 
 if (module.parent) {
